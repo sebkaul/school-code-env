@@ -1,0 +1,12 @@
+[project]
+name = "imat3012"
+version = "0.1.0"
+description = "IMAT3012 exercises"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "scipy",
+    "sympy",
+    "matplotlib",
+    "requests>=2.34.2",
+]
