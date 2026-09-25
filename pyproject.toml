@@ -1,7 +1,7 @@
 [project]
 name = "school-code-env"
 version = "0.1.0"
-description = "Add your description here"
+description = "Simple python codes used for chemical engineering courses"
 readme = "README.md"
 authors = [
     { name = "sebkaul", email = "sebkaul@users.noreply.github.com" }
