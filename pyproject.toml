@@ -21,3 +21,8 @@ school-code-env = "school_code_env:main"
 [build-system]
 requires = ["uv_build>=0.12.17,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pylint>=4.0.9",
+]
