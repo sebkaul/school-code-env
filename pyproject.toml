@@ -26,3 +26,11 @@ build-backend = "uv_build"
 dev = [
     "pylint>=4.0.9",
 ]
+
+[tool.pylint.messages_control]
+disable = [
+ "C",                    # conventions: naming, docstrings, whitespace, line length
+ "R",                    # refactor suggestions
+ "redefined-outer-name", # same variable name inside and outside a function
+ "unused-variable",      # unused variables
+]
