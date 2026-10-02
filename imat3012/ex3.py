@@ -35,3 +35,18 @@ ax.set_title('Domenet: 0≤x≤1, 0≤y≤x², 0≤z≤y²')
 
 plt.tight_layout()
 plt.show()
+
+N = 100000000
+x = np.random.rand(N)
+y = np.random.rand(N)
+z = np.random.rand(N)
+
+inside = (y <= x**2) & (z <= y**2)
+
+I_est = np.mean(inside)
+
+#print(len(inside))
+#print(inside)
+#print(np.sum(inside))
+
+print("Monte Carlo estimat:", I_est)
