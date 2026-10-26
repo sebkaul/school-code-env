@@ -14,8 +14,8 @@ DF = 1  # ingen fortynning etter kolonnen
 
 # {"navn": [A595 rør 1, (rør 2)]}
 prover = {
-    "Prøve 1": [0.076],
-    "Prøve 2": [0.083],
+    "Prøve 1": [0.235],
+    "Prøve 2": [0.226],
 }
 
 # =======================
