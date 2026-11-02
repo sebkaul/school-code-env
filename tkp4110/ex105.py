@@ -16,7 +16,15 @@ X_EB = lambda T: (T - T_0)/dT_ad
 Ts = np.linspace(600, 1100, 1000)
 plt.plot(Ts, X_MB(Ts), label="MB")
 plt.plot(Ts, X_EB(Ts), label="EB")
-plt.ylim(0, 1.05); plt.xlabel("T [K]"); plt.ylabel("X"); plt.legend(); plt.show()
+plt.ylim(0, 1.05); plt.xlabel("T [K]"); plt.ylabel("X"); plt.legend(); # plt.show()
 
-T = brentq(lambda T: X_MB(T) - X_EB(T), 700,800)   # bracket around the crossing you see
+T = brentq(lambda T: X_MB(T) - X_EB(T), 700,1050)   # bracket around the crossing you see
 print(f"T = {T:.1f} K, X = {X_EB(T):.4f}")
+
+def n_roots(T_0):
+    f = lambda T: X_MB(T) - (T - T_0)/dT_ad
+    Ts = np.linspace(T0, T_0 + 300, 5000)
+    return np.sum(np.diff(np.sign(f(Ts))) != 0)   # number of sign changes
+
+for T0 in range(655, 716, 5):
+    print(T0, n_roots(T0))
